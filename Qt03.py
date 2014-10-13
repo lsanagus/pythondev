@@ -2,6 +2,7 @@
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 import sys
+import urllib
 
 class Spear(QDialog):
     def __init__(self):
@@ -26,6 +27,11 @@ class Spear(QDialog):
 
     def changeTextLabel(self, text):
 	self.label.setText(text)
+
+    def download(self):
+        url = self.url.text()
+	save_location = self.save_location.text()
+	save_location = self.save_location.text()    	 	
 
 app = QApplication(sys.argv)
 dialog = Spear()
